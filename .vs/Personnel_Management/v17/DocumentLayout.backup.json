@@ -3,6 +3,34 @@
   "WorkspaceRootPath": "D:\\c#\\Personnel_Management\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E83857D5-F441-4130-A246-A99304C8DCD3}|Personnel_Management\\Personnel_Management.csproj|d:\\c#\\personnel_management\\personnel_management\\base\\models\\parttimeemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E83857D5-F441-4130-A246-A99304C8DCD3}|Personnel_Management\\Personnel_Management.csproj|solutionrelative:personnel_management\\base\\models\\parttimeemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E83857D5-F441-4130-A246-A99304C8DCD3}|Personnel_Management\\Personnel_Management.csproj|d:\\c#\\personnel_management\\personnel_management\\base\\models\\fulltimeemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E83857D5-F441-4130-A246-A99304C8DCD3}|Personnel_Management\\Personnel_Management.csproj|solutionrelative:personnel_management\\base\\models\\fulltimeemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E83857D5-F441-4130-A246-A99304C8DCD3}|Personnel_Management\\Personnel_Management.csproj|d:\\c#\\personnel_management\\personnel_management\\base\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E83857D5-F441-4130-A246-A99304C8DCD3}|Personnel_Management\\Personnel_Management.csproj|solutionrelative:personnel_management\\base\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E83857D5-F441-4130-A246-A99304C8DCD3}|Personnel_Management\\Personnel_Management.csproj|d:\\c#\\personnel_management\\personnel_management\\base\\interface\\imenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E83857D5-F441-4130-A246-A99304C8DCD3}|Personnel_Management\\Personnel_Management.csproj|solutionrelative:personnel_management\\base\\interface\\imenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E83857D5-F441-4130-A246-A99304C8DCD3}|Personnel_Management\\Personnel_Management.csproj|d:\\c#\\personnel_management\\personnel_management\\base\\interface\\iemployeemanage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E83857D5-F441-4130-A246-A99304C8DCD3}|Personnel_Management\\Personnel_Management.csproj|solutionrelative:personnel_management\\base\\interface\\iemployeemanage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E83857D5-F441-4130-A246-A99304C8DCD3}|Personnel_Management\\Personnel_Management.csproj|d:\\c#\\personnel_management\\personnel_management\\base\\ui\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E83857D5-F441-4130-A246-A99304C8DCD3}|Personnel_Management\\Personnel_Management.csproj|solutionrelative:personnel_management\\base\\ui\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E83857D5-F441-4130-A246-A99304C8DCD3}|Personnel_Management\\Personnel_Management.csproj|d:\\c#\\personnel_management\\personnel_management\\base\\services\\employeemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E83857D5-F441-4130-A246-A99304C8DCD3}|Personnel_Management\\Personnel_Management.csproj|solutionrelative:personnel_management\\base\\services\\employeemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E83857D5-F441-4130-A246-A99304C8DCD3}|Personnel_Management\\Personnel_Management.csproj|d:\\c#\\personnel_management\\personnel_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E83857D5-F441-4130-A246-A99304C8DCD3}|Personnel_Management\\Personnel_Management.csproj|solutionrelative:personnel_management\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 201,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,13 +50,104 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IMenuManager.cs",
+              "DocumentMoniker": "D:\\c#\\Personnel_Management\\Personnel_Management\\Base\\Interface\\IMenuManager.cs",
+              "RelativeDocumentMoniker": "Personnel_Management\\Base\\Interface\\IMenuManager.cs",
+              "ToolTip": "D:\\c#\\Personnel_Management\\Personnel_Management\\Base\\Interface\\IMenuManager.cs",
+              "RelativeToolTip": "Personnel_Management\\Base\\Interface\\IMenuManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T06:35:22.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IEmployeeManage.cs",
+              "DocumentMoniker": "D:\\c#\\Personnel_Management\\Personnel_Management\\Base\\Interface\\IEmployeeManage.cs",
+              "RelativeDocumentMoniker": "Personnel_Management\\Base\\Interface\\IEmployeeManage.cs",
+              "ToolTip": "D:\\c#\\Personnel_Management\\Personnel_Management\\Base\\Interface\\IEmployeeManage.cs",
+              "RelativeToolTip": "Personnel_Management\\Base\\Interface\\IEmployeeManage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T06:34:54.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MenuManager.cs",
+              "DocumentMoniker": "D:\\c#\\Personnel_Management\\Personnel_Management\\Base\\UI\\MenuManager.cs",
+              "RelativeDocumentMoniker": "Personnel_Management\\Base\\UI\\MenuManager.cs",
+              "ToolTip": "D:\\c#\\Personnel_Management\\Personnel_Management\\Base\\UI\\MenuManager.cs",
+              "RelativeToolTip": "Personnel_Management\\Base\\UI\\MenuManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T06:08:30.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmployeeManager.cs",
+              "DocumentMoniker": "D:\\c#\\Personnel_Management\\Personnel_Management\\Base\\Services\\EmployeeManager.cs",
+              "RelativeDocumentMoniker": "Personnel_Management\\Base\\Services\\EmployeeManager.cs",
+              "ToolTip": "D:\\c#\\Personnel_Management\\Personnel_Management\\Base\\Services\\EmployeeManager.cs",
+              "RelativeToolTip": "Personnel_Management\\Base\\Services\\EmployeeManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T06:07:51.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PartTimeEmployee.cs",
+              "DocumentMoniker": "D:\\c#\\Personnel_Management\\Personnel_Management\\Base\\Models\\PartTimeEmployee.cs",
+              "RelativeDocumentMoniker": "Personnel_Management\\Base\\Models\\PartTimeEmployee.cs",
+              "ToolTip": "D:\\c#\\Personnel_Management\\Personnel_Management\\Base\\Models\\PartTimeEmployee.cs",
+              "RelativeToolTip": "Personnel_Management\\Base\\Models\\PartTimeEmployee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T06:07:12.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FullTimeEmployee.cs",
+              "DocumentMoniker": "D:\\c#\\Personnel_Management\\Personnel_Management\\Base\\Models\\FullTimeEmployee.cs",
+              "RelativeDocumentMoniker": "Personnel_Management\\Base\\Models\\FullTimeEmployee.cs",
+              "ToolTip": "D:\\c#\\Personnel_Management\\Personnel_Management\\Base\\Models\\FullTimeEmployee.cs",
+              "RelativeToolTip": "Personnel_Management\\Base\\Models\\FullTimeEmployee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T06:06:51.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\c#\\Personnel_Management\\Personnel_Management\\Base\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "Personnel_Management\\Base\\Models\\Employee.cs",
+              "ToolTip": "D:\\c#\\Personnel_Management\\Personnel_Management\\Base\\Models\\Employee.cs",
+              "RelativeToolTip": "Personnel_Management\\Base\\Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T06:06:36.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\c#\\Personnel_Management\\Personnel_Management\\Program.cs",
               "RelativeDocumentMoniker": "Personnel_Management\\Program.cs",
               "ToolTip": "D:\\c#\\Personnel_Management\\Personnel_Management\\Program.cs",
               "RelativeToolTip": "Personnel_Management\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-05T06:02:29.085Z",
               "EditorCaption": ""

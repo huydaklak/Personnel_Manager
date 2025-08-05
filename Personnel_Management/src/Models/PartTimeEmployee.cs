@@ -2,8 +2,8 @@
 {
     public class PartTimeEmployee : Employee
     {
-        public int WorkingHours;
-        public double HourlyRate;
+        public int WorkingHours { get; set; }
+        public double HourlyRate { get; set; }
 
         public override double CalculateSalary()
         {

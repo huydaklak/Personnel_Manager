@@ -4,11 +4,10 @@ namespace Personnel_Management.Models
 {
     public abstract class Employee
     {
-        public string ID;
-        public string Name;
-        public string Age;
-        public double BasicSalary;
-
+        public string ID { get; set; }
+        public string Name { get; set; }
+        public string Age { get; set; }
+        public double BasicSalary { get; set; }
 
         public virtual double CalculateSalary()
         {

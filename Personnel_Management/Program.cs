@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Personnel_Management.UI;
 
 namespace Personnel_Management
 {
@@ -10,6 +6,8 @@ namespace Personnel_Management
     {
         static void Main(string[] args)
         {
+            MenuManager menuManager = new MenuManager();
+            menuManager.ShowMainMenu();
         }
     }
 }

@@ -2,8 +2,8 @@
 {
     public class FullTimeEmployee : Employee
     {
-        public double Bonus;
-        public double Penalty;
+        public double Bonus { get; set; }
+        public double Penalty { get; set; }
 
 
         public override double CalculateSalary()

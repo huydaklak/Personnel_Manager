@@ -43,15 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\Interface\IEmployeeManage.cs" />
-    <Compile Include="Base\Interface\IMenuManager.cs" />
-    <Compile Include="Base\Models\Employee.cs" />
-    <Compile Include="Base\Models\FullTimeEmployee.cs" />
-    <Compile Include="Base\Models\PartTimeEmployee.cs" />
+    <Compile Include="src\Interface\IEmployeeManage.cs" />
+    <Compile Include="src\Interface\IMenuManager.cs" />
+    <Compile Include="src\Models\Employee.cs" />
+    <Compile Include="src\Models\FullTimeEmployee.cs" />
+    <Compile Include="src\Models\PartTimeEmployee.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Base\Services\EmployeeManager.cs" />
-    <Compile Include="Base\UI\MenuManager.cs" />
+    <Compile Include="src\Services\EmployeeManager.cs" />
+    <Compile Include="src\UI\MenuManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
