@@ -1,1 +1,30 @@
+# Tệp biên dịch và thư mục bin/obj
+bin/
 obj/
+
+# Visual Studio user-specific files
+.vscode/
+*.user
+*.suo
+
+# Build results
+*.dll
+*.exe
+*.log
+
+# Thư viện và packages được tự động restore
+packages/
+*.nupkg
+
+# Thư mục publish
+publish/
+
+# File môi trường
+.env
+
+# Thư mục chứa cache
+*.cache
+
+# lam on nho jup a
+
+.vs/
