@@ -10,6 +10,7 @@ namespace Personnel_Management
             MenuManager menuManager = new MenuManager();
             menuManager.Run();
             Console.WriteLine("test git");
+            Console.WriteLine("test git 2");
         }
     }
 }
