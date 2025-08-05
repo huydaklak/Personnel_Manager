@@ -9,6 +9,7 @@ namespace Personnel_Management
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             MenuManager menuManager = new MenuManager();
             menuManager.Run();
+            Console.WriteLine("test git");
         }
     }
 }
