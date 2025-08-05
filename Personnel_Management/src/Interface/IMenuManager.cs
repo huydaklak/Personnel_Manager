@@ -8,8 +8,9 @@
         void InputPartTimeEmployee();
         void PromptSearchByName();
         void PromptDeleteById();
-
-
+        void PromptFindHighestSalary();
+        void PromptCalculateTotalSalary();
+        void Run();
 
     }
 }

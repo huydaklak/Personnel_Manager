@@ -16,6 +16,8 @@ namespace Personnel_Management.Models
 
         public virtual void DisplayInfo()
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
             Console.WriteLine("ID cua nhan vien la : " + ID);
             Console.WriteLine("Họ và tên của nhân viên là : " + Name);
             Console.WriteLine("Tuổi của nhân viên là : " + Age);

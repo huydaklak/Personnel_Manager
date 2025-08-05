@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Personnel_Management.Base.Interface;
 using Personnel_Management.Models;
 
@@ -10,37 +11,88 @@ namespace Personnel_Management.Services
         private List<Employee> employees = new List<Employee>();
         public void AddEmployee(Employee employee)
         {
-            throw new NotImplementedException();
+            employees.Add(employee);
+            Console.WriteLine("Thêm thành công nhân viên");
         }
 
         public void DisplayAllEmployees()
         {
-            throw new NotImplementedException();
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            if (employees.Count == 0)
+            {
+                Console.WriteLine("Danh sách nhân viên trống");
+                return;
+            }
+
+            Console.WriteLine("Danh sách nhân viên : ");
+            foreach (var emp in employees)
+            {
+                emp.DisplayInfo();
+                Console.WriteLine("Tổng lương các nhân viên : " + emp.CalculateSalary());
+                Console.WriteLine("-------------------------------");
+            }
         }
 
-        public void CalculateSalaryEmploye()
+        public double CalculateTotalSalary()
         {
-            throw new NotImplementedException();
+            return employees.Sum(e => e.CalculateSalary());
         }
 
-        public void FindHighestSalaryEmployee()
+        public Employee FindHighestSalaryEmployee()
         {
-            throw new NotImplementedException();
+            if (employees.Count == 0)
+            {
+                return null;
+            }
+
+            return employees.OrderByDescending(e => e.CalculateSalary()).First();
         }
 
         public void FindEmployeesByName(string name)
         {
-            throw new NotImplementedException();
+            var matches = employees
+                .Where(e => e.Name != null && e.Name.ToLower().Contains(name.ToLower()))
+                .ToList();
+
+            if (matches.Count == 0)
+            {
+                Console.WriteLine("Không tìm thấy nhân viên nào khớp.");
+                return;
+            }
+
+            Console.WriteLine("Các nhân viên tìm thấy:");
+            foreach (var emp in matches)
+            {
+                emp.DisplayInfo();
+                Console.WriteLine($"Tổng lương: {emp.CalculateSalary()}");
+                Console.WriteLine("-----------------------------");
+            }
         }
 
         public void RemoveEmployeeById(string id)
         {
-            throw new NotImplementedException();
+            var emp = employees.FirstOrDefault(e => e.ID == id);
+            if (emp == null)
+            {
+                Console.WriteLine("Không tìm thấy nhân viên với ID đó");
+                return;
+            }
+
+            employees.Remove(emp);
+            Console.WriteLine("Nhân viên đã được xóa thành công");
         }
 
         public void SortEmployeesBySalary()
         {
-            throw new NotImplementedException();
+            if (employees.Count == 0)
+            {
+                Console.WriteLine("Không có nhân viên để sắp xếp");
+                return;
+            }
+
+            employees = employees.OrderByDescending(e => e.CalculateSalary()).ToList();
+            Console.WriteLine("Danh sách nhân viên sau khi sắp xếp theo lương giảm dần : ");
+            DisplayAllEmployees();
         }
     }
 }

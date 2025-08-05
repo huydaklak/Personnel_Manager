@@ -6,8 +6,8 @@ namespace Personnel_Management.Base.Interface
     {
         void AddEmployee(Employee employee);
         void DisplayAllEmployees();
-        void CalculateSalaryEmploye();
-        void FindHighestSalaryEmployee();
+        double CalculateTotalSalary();
+        Employee FindHighestSalaryEmployee();
         void FindEmployeesByName(string Name);
         void RemoveEmployeeById(string ID);
         void SortEmployeesBySalary();
