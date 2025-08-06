@@ -9,10 +9,7 @@ namespace Personnel_Management.Models
         public string Age { get; set; }
         public double BasicSalary { get; set; }
 
-        public virtual double CalculateSalary()
-        {
-            return BasicSalary;
-        }
+        public abstract double CalculateSalary();
 
         public virtual void DisplayInfo()
         {

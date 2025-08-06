@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\Interface\IEmployeeManage.cs" />
+    <Compile Include="src\Interface\IEmployeeUI.cs" />
     <Compile Include="src\Interface\IMenuManager.cs" />
     <Compile Include="src\Models\Employee.cs" />
     <Compile Include="src\Models\FullTimeEmployee.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Services\EmployeeManager.cs" />
+    <Compile Include="src\UI\EmployeeUI.cs" />
     <Compile Include="src\UI\MenuManager.cs" />
   </ItemGroup>
   <ItemGroup>

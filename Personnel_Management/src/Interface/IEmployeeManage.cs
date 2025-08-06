@@ -9,7 +9,7 @@ namespace Personnel_Management.Base.Interface
         double CalculateTotalSalary();
         Employee FindHighestSalaryEmployee();
         void FindEmployeesByName(string Name);
-        void RemoveEmployeeById(string ID);
+        int RemoveEmployeeById(string ID);
         void SortEmployeesBySalary();
 
     }

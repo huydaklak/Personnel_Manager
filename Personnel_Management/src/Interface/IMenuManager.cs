@@ -4,12 +4,6 @@
     {
         void ShowMainMenu();
         void HandleOption(int option);
-        void InputFullTimeEmployee();
-        void InputPartTimeEmployee();
-        void PromptSearchByName();
-        void PromptDeleteById();
-        void PromptFindHighestSalary();
-        void PromptCalculateTotalSalary();
         void Run();
 
     }

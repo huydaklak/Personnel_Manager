@@ -50,36 +50,44 @@ namespace Personnel_Management.Services
 
         public void FindEmployeesByName(string name)
         {
-            var matches = employees
-                .Where(e => e.Name != null && e.Name.ToLower().Contains(name.ToLower()))
-                .ToList();
+            bool found = false;
 
-            if (matches.Count == 0)
+            for (int i = 0; i < employees.Count; i++)
             {
-                Console.WriteLine("Không tìm thấy nhân viên nào khớp.");
-                return;
+                Employee emp = employees[i];
+
+                if (emp.Name != null)
+                {
+                    string empName = emp.Name;
+                    if (empName.Contains(name))
+                    {
+                        Console.WriteLine("----- Nhân viên tìm thấy -----");
+                        emp.DisplayInfo();
+                        Console.WriteLine("Tổng lương: " + emp.CalculateSalary());
+                        found = true;
+                    }
+                }
             }
 
-            Console.WriteLine("Các nhân viên tìm thấy:");
-            foreach (var emp in matches)
+            if (!found)
             {
-                emp.DisplayInfo();
-                Console.WriteLine($"Tổng lương: {emp.CalculateSalary()}");
-                Console.WriteLine("-----------------------------");
+                Console.WriteLine("Không tìm thấy nhân viên nào khớp.");
             }
         }
 
-        public void RemoveEmployeeById(string id)
+
+
+        // ghi nho
+        public int RemoveEmployeeById(string id)
         {
             var emp = employees.FirstOrDefault(e => e.ID == id);
             if (emp == null)
             {
-                Console.WriteLine("Không tìm thấy nhân viên với ID đó");
-                return;
+                return -1; // Không tìm thấy
             }
 
             employees.Remove(emp);
-            Console.WriteLine("Nhân viên đã được xóa thành công");
+            return 1; // Xoá thành công
         }
 
         public void SortEmployeesBySalary()
