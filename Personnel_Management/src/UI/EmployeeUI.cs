@@ -171,5 +171,24 @@ namespace Personnel_Management.src.UI
                 Console.WriteLine(emp.ToString());
             }
         }
+        public void DisplayAllEmployees()
+        {
+            List<Employee> employees = employeeManager.GetAllEmployees();
+
+            if (employees.Count == 0)
+            {
+                Console.WriteLine("Chưa có nhân viên nào.");
+            }
+            else
+            {
+                Console.WriteLine("------ DANH SÁCH NHÂN VIÊN ------");
+                foreach (var emp in employees)
+                {
+                    emp.DisplayInfo();
+                    Console.WriteLine($"Tổng lương: {emp.CalculateSalary()}");
+                    Console.WriteLine("----------------------------------");
+                }
+            }
+        }
     }
 }

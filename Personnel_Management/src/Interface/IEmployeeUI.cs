@@ -10,5 +10,6 @@
         void PromptCalculateTotalSalary();
         void PromptSearchById();
         void DisplaySortedBySalary();
+        void DisplayAllEmployees();
     }
 }

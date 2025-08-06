@@ -19,7 +19,7 @@ namespace Personnel_Management.Services
         }
 
         // xóa void 
-        public List<Employee> DisplayAllEmployees()
+        public List<Employee> GetAllEmployees()
         {
             return employees;
         }
@@ -115,10 +115,6 @@ namespace Personnel_Management.Services
                     }
                 }
             }
-        }
-        public List<Employee> GetAllEmployees()
-        {
-            return employees;
         }
     }
 }

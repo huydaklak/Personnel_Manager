@@ -42,7 +42,7 @@ namespace Personnel_Management.UI
                     employeeUI.InputPartTimeEmployee();
                     break;
                 case 3:
-                    employeeManager.DisplayAllEmployees();
+                    employeeUI.DisplayAllEmployees();
                     break;
                 case 4:
                     employeeUI.PromptCalculateTotalSalary();

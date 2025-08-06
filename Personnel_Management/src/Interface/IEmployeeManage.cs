@@ -6,7 +6,7 @@ namespace Personnel_Management.Base.Interface
     public interface IEmployeeManage
     {
         bool AddEmployee(Employee employee);
-        List<Employee> DisplayAllEmployees();
+        List<Employee> GetAllEmployees();
         double CalculateTotalSalary();
         Employee FindHighestSalaryEmployee();
         int RemoveEmployeeById(string ID);
@@ -15,6 +15,5 @@ namespace Personnel_Management.Base.Interface
         List<Employee> FindEmployeesByName(string name);
         // sai  void FindEmployeesByName(string Name);
         void SortEmployeesBySalary();
-        List<Employee> GetAllEmployees();
     }
 }
