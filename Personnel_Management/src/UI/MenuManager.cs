@@ -27,6 +27,7 @@ namespace Personnel_Management.UI
             Console.WriteLine("6. Tìm nhân viên theo tên");
             Console.WriteLine("7. Xoá nhân viên theo ID");
             Console.WriteLine("8. Sắp xếp nhân viên theo lương");
+            Console.WriteLine("9. Tìm nhân viên theo ID");
             Console.WriteLine("0. Thoát");
         }
 
@@ -59,6 +60,9 @@ namespace Personnel_Management.UI
                     employeeManager.SortEmployeesBySalary();
                     Console.WriteLine("Danh sách nhân viên đã được sắp xếp theo lương.");
                     break;
+                case 9:
+                    employeeUI.PromptSearchById();
+                    break;
                 case 0:
                     Console.WriteLine("Cảm ơn bạn đã sử dụng chương trình. Tạm biệt!");
                     Environment.Exit(0); // Thoát chương trình
@@ -78,7 +82,7 @@ namespace Personnel_Management.UI
             {
                 ShowMainMenu();
                 Console.WriteLine();
-                Console.Write("Vui lòng nhập từ (1 -> 8) và 0 để thoát chương trình :  ");
+                Console.Write("Vui lòng nhập từ (1 -> 9) và 0 để thoát chương trình :  ");
                 Console.WriteLine();
                 if (int.TryParse(Console.ReadLine(), out int option))
                 {

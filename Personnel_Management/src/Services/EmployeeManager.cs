@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Personnel_Management.Base.Interface;
 using Personnel_Management.Models;
@@ -9,33 +8,30 @@ namespace Personnel_Management.Services
     public class EmployeeManager : IEmployeeManage
     {
         private List<Employee> employees = new List<Employee>();
-        public void AddEmployee(Employee employee)
+        public bool AddEmployee(Employee employee)
         {
+            //employees.Add(employee);
+            //Console.WriteLine("Thêm thành công nhân viên");
+
+            if (employee == null) return false;
             employees.Add(employee);
-            Console.WriteLine("Thêm thành công nhân viên");
+            return true;
         }
 
-        public void DisplayAllEmployees()
+        // xóa void 
+        public List<Employee> DisplayAllEmployees()
         {
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
-            if (employees.Count == 0)
-            {
-                Console.WriteLine("Danh sách nhân viên trống");
-                return;
-            }
-
-            Console.WriteLine("Danh sách nhân viên : ");
-            foreach (var emp in employees)
-            {
-                emp.DisplayInfo();
-                Console.WriteLine("Tổng lương các nhân viên : " + emp.CalculateSalary());
-                Console.WriteLine("-------------------------------");
-            }
+            return employees;
         }
 
         public double CalculateTotalSalary()
         {
-            return employees.Sum(e => e.CalculateSalary());
+            double total = 0;
+            foreach (Employee emp in employees)
+            {
+                total += emp.CalculateSalary();
+            }
+            return total;
         }
 
         public Employee FindHighestSalaryEmployee()
@@ -45,37 +41,35 @@ namespace Personnel_Management.Services
                 return null;
             }
 
-            return employees.OrderByDescending(e => e.CalculateSalary()).First();
+            Employee highest = employees[0];
+
+            for (int i = 1; i < employees.Count; i++)
+            {
+                if (employees[i].CalculateSalary() > highest.CalculateSalary())
+                {
+                    highest = employees[i];
+                }
+            }
+
+            return highest;
         }
 
-        public void FindEmployeesByName(string name)
+        public List<Employee> FindEmployeesByName(string name)
         {
-            bool found = false;
+            List<Employee> result = new List<Employee>();
 
             for (int i = 0; i < employees.Count; i++)
             {
                 Employee emp = employees[i];
 
-                if (emp.Name != null)
+                if (emp.Name != null && emp.Name.Contains(name))
                 {
-                    string empName = emp.Name;
-                    if (empName.Contains(name))
-                    {
-                        Console.WriteLine("----- Nhân viên tìm thấy -----");
-                        emp.DisplayInfo();
-                        Console.WriteLine("Tổng lương: " + emp.CalculateSalary());
-                        found = true;
-                    }
+                    result.Add(emp);
                 }
             }
 
-            if (!found)
-            {
-                Console.WriteLine("Không tìm thấy nhân viên nào khớp.");
-            }
+            return result;
         }
-
-
 
         // ghi nho
         public int RemoveEmployeeById(string id)
@@ -83,24 +77,48 @@ namespace Personnel_Management.Services
             var emp = employees.FirstOrDefault(e => e.ID == id);
             if (emp == null)
             {
-                return -1; // Không tìm thấy
+                return -1; // ko tìm thấy nhân viên với ID đã cho
             }
 
             employees.Remove(emp);
-            return 1; // Xoá thành công
+            return 1; // xoá thành công
         }
+
+        public Employee FindEmployeeById(string id)
+        {
+            for (int i = 0; i < employees.Count; i++)
+            {
+                Employee emp = employees[i];
+
+                if (emp.ID != null && emp.ID == id)
+                {
+                    return emp; // trả về nhân viên tìm thấy
+                }
+            }
+
+            return null; // ko tìm thấy nhân viên với ID đã cho
+        }
+
 
         public void SortEmployeesBySalary()
         {
-            if (employees.Count == 0)
+            for (int i = 0; i < employees.Count - 1; i++)
             {
-                Console.WriteLine("Không có nhân viên để sắp xếp");
-                return;
+                for (int j = 0; j < employees.Count - i - 1; j++)
+                {
+                    if (employees[j].CalculateSalary() < employees[j + 1].CalculateSalary())
+                    {
+                        // Hoán đổi vị trí và tìm hiểu kĩ đoạn naỳ
+                        Employee temp = employees[j];
+                        employees[j] = employees[j + 1];
+                        employees[j + 1] = temp;
+                    }
+                }
             }
-
-            employees = employees.OrderByDescending(e => e.CalculateSalary()).ToList();
-            Console.WriteLine("Danh sách nhân viên sau khi sắp xếp theo lương giảm dần : ");
-            DisplayAllEmployees();
+        }
+        public List<Employee> GetAllEmployees()
+        {
+            return employees;
         }
     }
 }

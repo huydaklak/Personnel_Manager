@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using Personnel_Management.Base.Interface;
 using Personnel_Management.Models;
@@ -87,9 +88,23 @@ namespace Personnel_Management.src.UI
         }
         public void PromptSearchByName()
         {
-            Console.Write("Nhập tên để tìm kiếm : ");
+            Console.Write("Nhập tên nhân viên cần tìm: ");
             string name = Console.ReadLine();
-            employeeManager.FindEmployeesByName(name);
+
+            var results = employeeManager.FindEmployeesByName(name);
+            if (results.Count == 0)
+            {
+                Console.WriteLine("Không tìm thấy nhân viên nào.");
+            }
+            else
+            {
+                foreach (var emp in results)
+                {
+                    Console.WriteLine("----- Nhân viên tìm thấy -----");
+                    emp.DisplayInfo();
+                    Console.WriteLine("Tổng lương: " + emp.CalculateSalary());
+                }
+            }
         }
         public void PromptDeleteById()
         {
@@ -128,5 +143,33 @@ namespace Personnel_Management.src.UI
             Console.WriteLine($"Tổng lương của công ty là: {total}");
         }
 
+        public void PromptSearchById()
+        {
+            Console.Write("Nhập ID nhân viên cần tìm: ");
+            string id = Console.ReadLine();
+
+            var emp = employeeManager.FindEmployeeById(id);
+            if (emp != null)
+            {
+                Console.WriteLine("Thông tin nhân viên:");
+                emp.DisplayInfo();
+                Console.WriteLine($"Tổng lương: {emp.CalculateSalary()}");
+            }
+            else
+            {
+                Console.WriteLine("Không tìm thấy nhân viên với ID đã nhập.");
+            }
+        }
+
+        public void DisplaySortedBySalary()
+        {
+            employeeManager.SortEmployeesBySalary();
+            List<Employee> employees = employeeManager.GetAllEmployees();
+
+            foreach (var emp in employees)
+            {
+                Console.WriteLine(emp.ToString());
+            }
+        }
     }
 }
